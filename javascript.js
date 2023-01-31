@@ -3,11 +3,14 @@ function verificar(){
     var qtdmetros = window.document.getElementById("qtdmetro")
     var resp = window.document.getElementById("resp")
     //resp.innerText ='Oi'
-    var valorkg = 84.90
-    var valordescont = 79.90
+
+    var valorkg = 89.90
+    var valordescont = 84.90
+    var valorkgp = 84.90
+    var valordescontp = 79.90
   
    if(qtdmetros.value.length == 0){
-     window.alert("[ERROR] digite as informações novamente")
+     window.alert("[ERROR] digite todas as informações corretamente")
    }
    else {
      var respbit = window.document.getElementsByClassName("cbit")
@@ -27,20 +30,34 @@ function verificar(){
         var bitselect = '3/4'
         var pesoselec = 0.410
      }
+   
+
+   if(Number(qtdmetros.value) * pesoselec < 3.7){
+      var valorkg = 89.90
+      var valordescont = 84.90
+      
+   }else{
+      var valorkg = 84.90
+      var valordescont = 79.90
+   }
+        
       var qtdmetros = window.document.getElementById("qtdmetro")
       var total = Number(qtdmetros.value) * pesoselec
       resp.innerText = 
         `${Number(qtdmetros.value)} metros de cano de cobre ${bitselect}.
-          
         Peso Total: ${total.toFixed(2)}kg
+        
         Valor a prazo: R$ ${(total*valorkg).toFixed(2)}
-        Valor a vista: R$ ${(total*valordescont).toFixed(2)}`
+        Valor a vista: R$ ${(total*valordescont).toFixed(2)}
+        
+        *Valor do metro sai por: ${(pesoselec * valorkg).toFixed(2)}`
+
         resp.style.background = "white"
         resp.style.borderRadius = "10px"
         resp.style.border = "solid black 2px"
         resp.style.padding = "15px 10px"
         resp.style.fontWeight = "700"
         resp.style.textAlign = 'center'
-     }  
-      
+     
+      } 
   }
