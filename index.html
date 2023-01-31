@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de cobre</title>
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/responsivel.css">
+</head>
+<body>
+    <h1>Calculo de Cobre Refricenter</h1>
+    <section id="area">
+      <strong><p id="titulo-metros">Metros:</p></strong> <input type="number" name="qtdmetro" id="qtdmetro" min="1" max="1000">
+      <br>
+      <div >
+        <p id="titulo-bitolas"><strong>Bitolas:</strong></p>
+        <label for="cobre">1/4 </label>
+        <input type="radio" name="cobre" value="c1-4" checked class="cbit">
+        <label for="cobre">3/8 </label>
+        <input type="radio" name="cobre" value="c3-8" class="cbit">
+        <label for="cobre">1/2 </label>
+        <input type="radio" name="cobre" value="c1-2" class="cbit">
+        <label for="cobre">5/8 </label>
+        <input type="radio" name="cobre" value="c5-8" class="cbit">
+        <label for="cobre">3/4 </label>
+        <input type="radio" name="cobre" value="c5-8" class="cbit">
+        <label for="cobre">7/8 </label> 
+        <input type="radio" name="cobre" value="c3-4" class="cbit">
+      </div>
+      <input type="button" value="Calcular" id="calcular" onclick="verificar()">
+      <div class="respostas">
+        <p id="resp">Preenche as informações para obter Orçamento!</p>
+      </div> 
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #244ef5;
+  }
+  h1{
+    margin: 40px;
+    font-size: 27px;
+    color: #ffffff;
+  }
+  #area{
+    background-color: aqua;
+    width: 350px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5px 15px 30px 3px #0d0d0d;
+  }
+  input{
+    text-align: center;
+    margin: 10px 0;
+  }
+  #bitolas{
+    margin: 10px 0;
+  }
+  label{
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  #calcular{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-align: center;
+    padding: 0px 30px;
+    background-color: #0400ff;
+    border-radius: 5px;
+
+  }
+  label{
+    font-weight: 900;
+  }
+  .respostas{
+    margin-top: 20px;
+  }
+  @media (max-width:375px) {
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    #area{
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   
+    }
+    h1{
+      font-size: 26px;
+      text-align: center;
+    }
+    #titulo-bitolas, #titulo-metros{
+      font-size: 20px;
+    }
+    #resp{
+      padding: 5px;
+    }
+  }
